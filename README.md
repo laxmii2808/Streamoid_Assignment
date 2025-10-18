@@ -77,6 +77,6 @@ curl -X POST -F "file=@products.csv" http://localhost:8000/upload
 
 1. **Clone the repository**
    ```bash
-   git clone <https://github.com/laxmii2808/Streamoid_Assignment.git)>
+   git clone https://github.com/laxmii2808/Streamoid_Assignment.git
    cd <Streamoid2>
 
