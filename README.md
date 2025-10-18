@@ -70,4 +70,14 @@ This project follows a **modular Express structure** to maintain scalability and
 ```bash
 curl -X POST -F "file=@products.csv" http://localhost:8000/upload
 
+---
+
+## Setup and Installation
+
+### Running Manually
+
+1. **Clone the repository**
+   ```bash
+   git clone <[your-github-repository-url](https://github.com/laxmii2808/Streamoid_Assignment.git)>
+   cd <Streamoid2>
 
