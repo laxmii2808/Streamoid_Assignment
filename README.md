@@ -40,27 +40,13 @@ This project follows a **modular Express structure** to maintain scalability and
 
 3. **Routes (`/routes`)**
    - Organizes API routes (`productRoutes.js`) for handling all product-related endpoints.
-
-4. **Middlewares (`/middlewares`)**
-   - `uploadMiddleware.js`: Handles file uploads using Multer.  
-   - `asyncWrapper.js`: Wraps async functions for cleaner error handling.  
-   - `pagination.js`: Provides pagination logic for large datasets.
-
-5. **Config (`/config`)**
+     
+4. **Config (`/config`)**
    - `database.js`: Configures Sequelize with SQLite database.
 
-6. **Validators (`/validators`)**
+5. **Validators (`/validators`)**
    - `queryValidator.js`: Ensures correct query parameters for search filters.
-
----
-
-## CRUD-like Operations
-
-| Action | Method | Route | Description |
-|--------|--------|-------|--------------|
-| Upload CSV | POST | `/upload` | Upload a CSV file of product details |
-| List Products | GET | `/products` | Retrieve paginated list of all products |
-| Search Products | GET | `/products/search` | Filter products by brand, color, or price range |
+   - `schema.js`
 
 ---
 
@@ -83,3 +69,5 @@ This project follows a **modular Express structure** to maintain scalability and
 ###  Upload Products from CSV
 ```bash
 curl -X POST -F "file=@products.csv" http://localhost:8000/upload
+
+
