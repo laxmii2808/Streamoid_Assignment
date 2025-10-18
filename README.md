@@ -94,22 +94,85 @@ npm start
 This request sends the products.csv file to the server to be parsed and stored.
 Endpoint: POST /upload
 Command:
-
 ```Bash
 curl.exe -X POST -F "file=@products.csv" http://localhost:8000/upload
 ## 2. List All Products
 This request retrieves a paginated list of all products from the database.
 ```
+Sample Response:
+```bash
+{
+  "stored": 20,
+  "failed": []
+}
+```
+## 2.List all the Products
 Endpoint: GET /products
 Command:
-```Bash
-
+```bash
 curl "http://localhost:8000/products?page=1&limit=5"
+```
+Sample Response:
+```bash
+{
+  "total": 20,
+    "pages": 10,
+    "currentPage": 1,
+    "products": [
+        {
+            "sku": "TSHIRT-RED-001",
+            "name": "Classic Cotton T-Shirt",
+            "brand": "Stream Threads",
+            "color": "Red",
+            "size": "M",
+            "mrp": 799,
+            "price": 499,
+            "quantity": 20
+        },
+        {
+            "sku": "TSHIRT-BLK-002",
+            "name": "Classic Cotton T-Shirt",
+            "brand": "Stream Threads",
+            "color": "Black",
+            "size": "L",
+            "mrp": 799,
+            "price": 549,
+            "quantity": 12
+        }
+    ]
+}
+```
 ## 3. Search and Filter Products
 This request searches for products that match specific criteria, such as brand and price range.
-```
 Endpoint: GET /products/search
 Command:
 ```bash
 curl "http://localhost:8000/products/search?brand=BloomWear&maxPrice=2500"
+```
+Sample Response:
+```bash
+{
+   [
+       {
+           "sku": "DRESS-PNK-S",
+           "name": "Floral Summer Dress",
+           "brand": "BloomWear",
+           "color": "Pink",
+           "size": "S",
+           "mrp": 2499,
+           "price": 2199,
+           "quantity": 10
+       },
+       {
+           "sku": "DRESS-YLW-M",
+           "name": "Floral Summer Dress",
+           "brand": "BloomWear",
+           "color": "Yellow",
+           "size": "M",
+           "mrp": 2499,
+           "price": 1999,
+           "quantity": 7
+       }
+   ]
+}
 ```
