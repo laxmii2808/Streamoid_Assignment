@@ -61,7 +61,6 @@ This project follows a **modular Express structure** to maintain scalability and
 
 ### DevOps
 - **Docker** – Containerization for easy setup and deployment.
-
 ---
 
 ## API Examples
@@ -79,21 +78,29 @@ curl -X POST -F "file=@products.csv" http://localhost:8000/upload
    ```bash
    git clone https://github.com/laxmii2808/Streamoid_Assignment.git
    cd Streamoid2
-
-npm install
-npm start
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the server:**
+   ```bash
+   npm install
+   ```
 
 1. **Build the Docker image**
    ```bash
    docker build -t streamoid-backend
+   ```
 2. **Run the container**
    ```bash
    docker run -p 8000:8000 streamoid-backend
-   
+   ```
+### API Documentation
 ## 1. Upload Products from CSV
 This request sends the products.csv file to the server to be parsed and stored.
-Endpoint: POST /upload
-Command:
+- Endpoint: POST /upload
+- Command:
 ```Bash
 curl.exe -X POST -F "file=@products.csv" http://localhost:8000/upload
 ```
@@ -106,8 +113,8 @@ Sample Response:
 ```
 ## 2.List all the Products
 This request retrieves a paginated list of all products from the database.
-Endpoint: GET /products
-Command:
+- Endpoint: GET /products
+- Command:
 ```bash
 curl "http://localhost:8000/products?page=1&limit=5"
 ```
@@ -143,8 +150,8 @@ Sample Response:
 ```
 ## 3. Search and Filter Products
 This request searches for products that match specific criteria, such as brand and price range.
-Endpoint: GET /products/search
-Command:
+- Endpoint: GET /products/search
+- Command:
 ```bash
 curl "http://localhost:8000/products/search?brand=BloomWear&maxPrice=2500"
 ```
@@ -174,4 +181,10 @@ Sample Response:
        }
    ]
 }
+```
+###Testing Instructions
+The project includes a full suite of unit tests for validation and API logic. To run the tests, use the following command:
+
+```Bash
+npm test
 ```
