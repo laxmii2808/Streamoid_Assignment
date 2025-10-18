@@ -63,13 +63,6 @@ This project follows a **modular Express structure** to maintain scalability and
 - **Docker** – Containerization for easy setup and deployment.
 ---
 
-## API Examples
-
-### Upload Products from CSV
-
-```bash
-curl -X POST -F "file=@products.csv" http://localhost:8000/upload
-```
 ##  Setup and Installation
 
 ### Running Manually
@@ -85,7 +78,7 @@ curl -X POST -F "file=@products.csv" http://localhost:8000/upload
    ```
 3. **Start the server:**
    ```bash
-   npm install
+   npm start
    ```
 
 1. **Build the Docker image**
@@ -182,7 +175,7 @@ Sample Response:
    ]
 }
 ```
-###Testing Instructions
+### Testing Instructions
 The project includes a full suite of unit tests for validation and API logic. To run the tests, use the following command:
 
 ```Bash
