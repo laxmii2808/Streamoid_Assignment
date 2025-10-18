@@ -66,18 +66,17 @@ This project follows a **modular Express structure** to maintain scalability and
 
 ## API Examples
 
-###  Upload Products from CSV
+### Upload Products from CSV
+
 ```bash
 curl -X POST -F "file=@products.csv" http://localhost:8000/upload
-
----
-
-## Setup and Installation
+```
+##  Setup and Installation
 
 ### Running Manually
 
 1. **Clone the repository**
    ```bash
-   git clone <[your-github-repository-url](https://github.com/laxmii2808/Streamoid_Assignment.git)>
+   git clone <https://github.com/laxmii2808/Streamoid_Assignment.git)>
    cd <Streamoid2>
 
