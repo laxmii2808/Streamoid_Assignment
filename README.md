@@ -89,7 +89,7 @@ This project follows a **modular Express structure** to maintain scalability and
    ```bash
    docker run -p 8000:8000 streamoid-backend
    ```
-### API Documentation
+# API Documentation
 ## 1. Upload Products from CSV
 This request sends the products.csv file to the server to be parsed and stored.
 - Endpoint: POST /upload
@@ -175,7 +175,7 @@ Sample Response:
    ]
 }
 ```
-### Testing Instructions
+## Testing Instructions
 The project includes a full suite of unit tests for validation and API logic. To run the tests, use the following command:
 
 ```Bash
