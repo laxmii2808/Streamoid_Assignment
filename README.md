@@ -78,7 +78,7 @@ curl -X POST -F "file=@products.csv" http://localhost:8000/upload
 1. **Clone the repository**
    ```bash
    git clone https://github.com/laxmii2808/Streamoid_Assignment.git
-   cd <Streamoid2>
+   cd Streamoid2
 
 npm install
 npm start
@@ -96,8 +96,6 @@ Endpoint: POST /upload
 Command:
 ```Bash
 curl.exe -X POST -F "file=@products.csv" http://localhost:8000/upload
-## 2. List All Products
-This request retrieves a paginated list of all products from the database.
 ```
 Sample Response:
 ```bash
@@ -107,6 +105,7 @@ Sample Response:
 }
 ```
 ## 2.List all the Products
+This request retrieves a paginated list of all products from the database.
 Endpoint: GET /products
 Command:
 ```bash
